@@ -7,10 +7,15 @@ const link = document.getElementById('cuenta');
 const login = document.getElementById('login');
 
 
-link.addEventListener('click', ()=>{
-    window.location.href = 'signup.html';
-});
 
+auth.onAuthStateChanged(
+    (user)=>{
+        if(user !==null){
+            window.location.href= 'index.html';
+        }
+    }
+
+);
 
 
 login.addEventListener('click', ()=>{

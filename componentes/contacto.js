@@ -1,7 +1,6 @@
-
 const database2 = firebase.database();
 
-class contacto{ 
+class Contacto{ 
     constructor(contactoLista){
         this.contactoLista=contactoLista;
     
@@ -15,12 +14,13 @@ component.className="comp";
 let contactoComp = document.createElement('div');
 contactoComp.className="contactoComp";
 contactoComp.innerHTML=(
-    this.contactoLista.i
+    this.contactoLista.nomContacto+`<br>`+
+    this.contactoLista.telContacto
+    
+
 );
 
-let idContacto = document.createElement('div');
-   idContacto.className="idTarea";
-   idContacto.innerHTML = this.contactoLista.id;
+
 
 
 let deleteBtn = document.createElement('button');
@@ -30,7 +30,7 @@ deleteBtn.innerHTML = "x";
 
 deleteBtn.addEventListener('click', ()=>{
            
-    database2.ref('tarea/tareaNueva/'+this.contactoLista.id).set(null);
+    database2.ref('UltimoLab/contactos/'+this.contactoLista.id).set(null);
     
     });
 
@@ -39,27 +39,11 @@ deleteBtn.addEventListener('click', ()=>{
     
     component.appendChild(contactoComp);
     component.appendChild(deleteBtn);
-    component.appendChild(idContacto);
+    
  
-
     return component;
 
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }

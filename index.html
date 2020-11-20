@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
 
@@ -13,12 +14,12 @@
 
 
 <div id="mainDiv">
-<p id="nombreEdit">
-
-</p>
+<p id="nombre">...</p>
  <p>Tus Contactos</p>   
 <div id="contactoDiv">
-<div id="contacto"></div>
+<div id="contacto">
+
+</div>
 <button id="agregarBtn">Agregar</button>
 <button id="logout">Logout</button>
 </div>
@@ -28,6 +29,9 @@
 <div id="popup">
     <p><input id ="nombreContacto"type="text"placeholder="Nombre"></p>
 <p><input id ="telefonoContacto"type="text"placeholder="Telefono"></p>
+<button id="agregarContactBtn">Agregar</button>
+<button id="exit">X</button>
+
 </div>
 
 
@@ -51,7 +55,8 @@
   
   </script>
   <script src="js/index.js"></script>
-  <script src="componentes/contacto.js"></script>
+  <script src="componentes/Contacto.js"></script>
+
   
 </body>
 </html>
